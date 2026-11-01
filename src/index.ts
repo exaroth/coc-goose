@@ -57,30 +57,4 @@ export async function activate(context: ExtensionContext) {
     });
   });
 
-  commands.registerCommand("depro", async (name?: string) => {
-    window.showInformationMessage("hery");
-    return "hey";
-  });
-
-
-  // const command = config.get('path', '');
-
-  // if (command === '') {
-  // 	return window.showErrorMessage(
-  // 		'Failed to find the zls executable! Please specify its path in
-  // your settings.',
-  // 	);
-  // }
-  // context.subscriptions.push(commands.registerCommand(commandId, async
-  // (name?: string) => {
-
-  //   const message = `Hello from ${name ?? 'coc.nvim'}!`
-  //   await window.showInformationMessage(message)
-
-  //   return message
-  // })
-
-  // if (config.get('enabled', true)) {
-  // 	return;
-  // }
 }
