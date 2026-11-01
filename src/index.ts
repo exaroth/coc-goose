@@ -16,12 +16,17 @@ export async function activate(context: ExtensionContext) {
   	return;
   }
 
-  const command = config.get("path", "/home/exaroth/goose/build/goose");
+  const command = config.get("path", "goose");
 
-  //todo add stdlib
+  let optargs = ["lsp"]
+  let stdlib = config.get("stdlib", null)
+
+  if (stdlib != null) {
+      optargs.push("--stdlib", stdlib)
+  }
   const opts: ServerOptions = {
     command,
-    args: ["lsp", "--stdlib", "/home/exaroth/goose/stdlib"],
+    args: ["lsp", "--stdlib", ""],
   };
 
   const clientOpts: LanguageClientOptions = {

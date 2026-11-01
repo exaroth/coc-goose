@@ -38,6 +38,11 @@
                     "type": "string",
                     "default": "goose",
                     "description": "Path to goose compiler"
+                },
+                "goose.stdlib": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Path to goose standard library"
                 }
             }
         }
