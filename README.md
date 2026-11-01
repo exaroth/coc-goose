@@ -1,6 +1,6 @@
 ## CoC Goose
 
-<img align="center" width="400"  src="https://github.com/user-attachments/assets/1a52cee2-cec9-4481-b828-faceee198c78" alt=""><br/>
+<img align="center" width="900"  src="https://github.com/user-attachments/assets/1a52cee2-cec9-4481-b828-faceee198c78" alt=""><br/>
 
 [Goose Programming Language](https://github.com/aardappel/goose) LSP integration for [CoC.nvim](https://github.com/neoclide/coc.nvim).
 
