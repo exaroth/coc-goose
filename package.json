@@ -1,0 +1,57 @@
+{
+    "name": "coc-goose",
+    "version": "0.1.0",
+    "description": "Goose LSP integration for CoC",
+    "author": "Konrad Wasowicz <exaroth@gmail.com>",
+    "license": "MIT",
+    "main": "lib/index.js",
+    "files": [
+        "lib"
+    ],
+    "engines": { "coc": "^0.0.80" },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/exaroth/coc-goose.git"
+    },
+    "activationEvents": [
+        "onLanguage:goose"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "goose.start", "title": "Start LSP server",
+                "command": "goose.stop", "title": "STop LSP server",
+                "command": "goose.restart", "title": "Restart LSP server",
+                "command": "depro", "title": "DEbug"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "coc-goose configuration",
+            "properties": {
+                "goose.enable": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable Goose extension"
+                },
+                "goose.path": {
+                    "type": "string",
+                    "default": "goose",
+                    "description": "Path to goose compiler"
+                }
+            }
+        }
+    },
+    "keywords": [
+        "coc.nvim",
+        "languageserver",
+        "goose",
+        "vim",
+        "neovim"
+    ],
+    "scripts": {
+        "build": "node esbuild.mjs",
+        "prepare": "npm run build"
+    }
+
+}
