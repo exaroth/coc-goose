@@ -10,7 +10,7 @@
 > 
 > or
 > 
-> 3. Add `au BufRead,BufNewFile *.goose setfiletype goose` line to your `.vimrc` on `init.vim`
+> 2. Add `au BufRead,BufNewFile *.goose setfiletype goose` line to your `.vimrc` on `init.vim`
 
 
 ### Installation
