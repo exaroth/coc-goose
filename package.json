@@ -1,6 +1,6 @@
 {
   "name": "coc-goose",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Goose LSP integration for CoC",
   "author": "Konrad Wasowicz <exaroth@gmail.com>",
   "license": "MIT",
