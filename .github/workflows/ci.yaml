@@ -3,10 +3,10 @@ name: check
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -26,9 +26,8 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm ci
-        run: |
-          npm ci
+      - name: Install deps
+        run: npm install --only=dev
       - name: npm typecheck
         run: |
           npm run typecheck

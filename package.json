@@ -21,10 +21,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "goose.start",
-        "title": "Start LSP server",
-        "command": "goose.stop",
-        "title": "STop LSP server",
         "command": "goose.restart",
         "title": "Restart LSP server"
       }
