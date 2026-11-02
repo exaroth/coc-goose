@@ -1,62 +1,73 @@
 {
-    "name": "coc-goose",
-    "version": "0.1.0",
-    "description": "Goose LSP integration for CoC",
-    "author": "Konrad Wasowicz <exaroth@gmail.com>",
-    "license": "MIT",
-    "main": "lib/index.js",
-    "files": [
-        "lib"
+  "name": "coc-goose",
+  "version": "0.1.0",
+  "description": "Goose LSP integration for CoC",
+  "author": "Konrad Wasowicz <exaroth@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "coc": "^0.0.80"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exaroth/coc-goose.git"
+  },
+  "activationEvents": [
+    "onLanguage:goose"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "goose.start",
+        "title": "Start LSP server",
+        "command": "goose.stop",
+        "title": "STop LSP server",
+        "command": "goose.restart",
+        "title": "Restart LSP server"
+      }
     ],
-    "engines": { "coc": "^0.0.80" },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/exaroth/coc-goose.git"
-    },
-    "activationEvents": [
-        "onLanguage:goose"
-    ],
-    "contributes": {
-        "commands": [
-            {
-                "command": "goose.start", "title": "Start LSP server",
-                "command": "goose.stop", "title": "STop LSP server",
-                "command": "goose.restart", "title": "Restart LSP server",
-                "command": "depro", "title": "DEbug"
-            }
-        ],
-        "configuration": {
-            "type": "object",
-            "title": "coc-goose configuration",
-            "properties": {
-                "goose.enable": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Enable Goose extension"
-                },
-                "goose.path": {
-                    "type": "string",
-                    "default": "goose",
-                    "description": "Path to goose compiler"
-                },
-                "goose.stdlib": {
-                    "type": "string",
-                    "default": null,
-                    "description": "Path to goose standard library"
-                }
-            }
+    "configuration": {
+      "type": "object",
+      "title": "coc-goose configuration",
+      "properties": {
+        "goose.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Goose extension"
+        },
+        "goose.path": {
+          "type": "string",
+          "default": "goose",
+          "description": "Path to goose compiler"
+        },
+        "goose.stdlib": {
+          "type": "string",
+          "default": null,
+          "description": "Path to goose standard library"
         }
-    },
-    "keywords": [
-        "coc.nvim",
-        "languageserver",
-        "goose",
-        "vim",
-        "neovim"
-    ],
-    "scripts": {
-        "build": "node esbuild.mjs",
-        "prepare": "npm run build"
+      }
     }
-
+  },
+  "keywords": [
+    "coc.nvim",
+    "languageserver",
+    "goose",
+    "vim",
+    "neovim"
+  ],
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "prepare": "npm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "coc-test": "^0.2.2",
+    "coc.nvim": "^0.0.83-next.27",
+    "esbuild": "^0.28.2",
+    "typescript": "^6.0.3"
+  }
 }
