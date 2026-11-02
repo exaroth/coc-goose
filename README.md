@@ -7,8 +7,10 @@
 > [!IMPORTANT]
 > Vim/NeoVim does not yet offer proper filetype detection for Goose language by default, in order for the extension to work properly either:
 > 1. Install [goose-lang.vim](https://github.com/exaroth/goose-lang.vim)
+> 
 > or
-> 2. Add `au BufRead,BufNewFile *.goose setfiletype goose` line to your `.vimrc` on `init.vim`
+> 
+> 3. Add `au BufRead,BufNewFile *.goose setfiletype goose` line to your `.vimrc` on `init.vim`
 
 
 ### Installation
